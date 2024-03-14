@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas e Média </title>
+</head>
+<body>
+        <b>
+            <h1> Notas / Média </h1>
+            <p id="aluno"> ALUNO(A)</p>
+            <p id="nomes">
+
+                <script>
+                    var nome = prompt("Entre com seu nome :");
+                    var msg
+                    var nota1 = parseInt(prompt("Entre com sua Primeira Nota:"));
+                    if (nota1 < 0 || nota1 > 10){
+                        alert("Digite um valor válido");
+                    nota1 = parseInt(prompt("Entre com sua Primeira Nota:"));
+                    }
+
+                     var nota2 = parseInt(prompt("Entre com sua Segunda Nota:"));
+                    if (nota2 < 0 || nota2 > 10){
+                        alert("Digite um valor Válido");
+                    nota2 = parseInt(prompt("Entre com sua Segunda Nota :"));
+                    }
+
+                     var nota3 = parseInt(prompt("Entre com sua Terceira Nota:"));
+                    if (nota3 < 0 || nota3 > 10 ){
+                        alert("Digite um valor válido");
+                    nota3 = parseInt(prompt("Entre com sua Terceira Nota:"));
+                    }
+
+                     var nota4 = parseInt(prompt("Entre com sua Quarta Nota :"));
+                    if (nota4 < 0 || nota4 > 10){
+                        alert("Digite um valor válido");
+                    nota4 = parseInt(prompt("Entre com sua Quarta Nota:"));
+                    }
+
+                    var media = (nota1 + nota2 + nota3 + nota4) / 4;
+                        
+                    if (media >= 7.0){
+                        alert ("Sua média é : " + " "+ media + " " + "- " + " Você foi Aprovado !!!");
+                        msg = ("" + nome + "," + " " +"sua média é " + " " + media + ""+"-"+" Você foi Aprovado");
+                        document.write(msg);
+                    }else if (media < 5.0){
+                         alert("Sua média é :"+""+ media+""+"-"+"Você foi Reprovado");
+                         msg = ("" + nome + "," + "" +"sua média é " + "" + media + ""+"-"+" Você foi Reprovado");
+                         document.write("Sua média é :"+""+media+""+"-"+" Você foi Reprovado");
+                    }else if(media >= 5.0 && media < 7.0){
+                         alert("Sua média é :"+""+ media+""+"-"+" Você está de Recuperação");
+                         msg = ("" + nome + "," + "" +"sua média é " + "" + media + ""+"-"+" Você está de Recuperação");
+                         document.write("Sua média é :"+""+media+""+"-"+" Você está de Recuperação");
+                    }else {
+                         alert(" Entre com um valor válido:");
+                         document.write(" Os valores foram inválidos");
+                        }
+                    
+
+                </script>
+
+            </p>
+        
+</body>
+</html>
